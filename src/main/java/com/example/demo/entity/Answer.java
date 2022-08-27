@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import com.example.demo.base.BaseEntity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,13 +11,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "answer")
-public class Answer {
+public class Answer extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(updatable = false, nullable = false)
+    @Column(name = "answer_id", updatable = false, nullable = false)
     private Long answerId;
 
+    @Column(name = "answer")
     private String answer;
 
     public Long getAnswerId() {

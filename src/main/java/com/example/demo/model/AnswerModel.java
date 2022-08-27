@@ -1,8 +1,12 @@
 package com.example.demo.model;
 
-public class AnswerModel {
+import com.example.demo.base.BaseModel;
+
+public class AnswerModel extends BaseModel {
 
     private Long answerId;
+
+    private String answer;
 
     public Long getAnswerId() {
         return answerId;
@@ -20,5 +24,4 @@ public class AnswerModel {
         this.answer = answer;
     }
 
-    private String answer;
 }

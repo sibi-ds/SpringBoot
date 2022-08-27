@@ -1,14 +1,14 @@
 package com.example.demo.mapper;
 
+import com.example.demo.base.BaseMapper;
 import com.example.demo.entity.Answer;
-import com.example.demo.entity.Question;
 import com.example.demo.model.AnswerModel;
-import com.example.demo.model.QuestionModel;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AnswerMapper {
+public class AnswerMapper implements BaseMapper<AnswerModel, Answer> {
 
+    @Override
     public AnswerModel entityToModel(Answer answer) {
         AnswerModel answerModel = new AnswerModel();
         answerModel.setAnswerId(answer.getAnswerId());
@@ -16,6 +16,7 @@ public class AnswerMapper {
         return answerModel;
     }
 
+    @Override
     public Answer modelToEntity(AnswerModel answerModel) {
         Answer answer = new Answer();
         answer.setAnswerId(answerModel.getAnswerId());

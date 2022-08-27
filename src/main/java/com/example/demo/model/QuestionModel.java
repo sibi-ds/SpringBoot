@@ -1,10 +1,13 @@
 package com.example.demo.model;
 
-import com.example.demo.entity.Answer;
+import com.example.demo.base.BaseModel;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.List;
 
-public class QuestionModel {
+public class QuestionModel extends BaseModel {
 
     private Long questionId;
     private String question;
